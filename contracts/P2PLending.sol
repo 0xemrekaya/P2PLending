@@ -41,8 +41,11 @@ contract P2PLending is TokenImplementer, Calculator {
 
   // Array of depositors
   mapping(address => Depositor) public depositors;
+
   mapping(address => CreditOptions[]) public creditOptions;
+
   mapping(address => Borrower) public borrowers;
+  
   mapping(address => Credit[]) public credits;
 
   modifier onlyDepositor() {
